@@ -1,0 +1,6 @@
+# Project exclude paths
+/node_modules/
+/TodoClient/node_modules/
+/TodoServer/.gradle/
+/TodoServer/build/
+/TodoServer/build/classes/java/main/

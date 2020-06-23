@@ -1,0 +1,26 @@
+<div class="mat-elevation-z8">
+  <table aria-label="List of todo items" class="full-width-table" mat-table
+         matSort (matSortChange)="onSortChange($event)" [dataSource]="dataSource"
+         matSortActive="expiration" matSortDirection="asc">
+    <!-- Completed Column -->
+    <ng-container matColumnDef="completed">
+      <th mat-header-cell *matHeaderCellDef class="completed-column" id="Completed"></th>
+      <td mat-cell *matCellDef="let todo"><mat-checkbox [checked]="todo.completed"></mat-checkbox></td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="Title">Title</th>
+      <td mat-cell *matCellDef="let todo">{{todo.title}}</td>
+    </ng-container>
+
+    <!-- Expiry Date Column -->
+    <ng-container matColumnDef="expiration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="Expiration">Expiration</th>
+      <td mat-cell *matCellDef="let todo">{{todo.expiration}}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let todo; columns: displayedColumns;"></tr>
+  </table>
+</div>
