@@ -4,3 +4,8 @@
 /TodoServer/.gradle/
 /TodoServer/build/
 /TodoServer/build/classes/java/main/
+
+Todo.iml
+.idea
+/.gradle/
+/TodoClient/.gradle/
